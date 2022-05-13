@@ -15,6 +15,7 @@ Create a TCP server that listens on port `9000` and publishes stock ticks. Each 
     "volume": 1300000
 }
 ```
+
 Server will publish ticks for 10 symbols that will be randomly generated.  Server will create a cache of 10 stocks will following default values:
 ```json
 {
@@ -27,6 +28,7 @@ Server will publish ticks for 10 symbols that will be randomly generated.  Serve
     "volume": 10000
 }
 ```
+
 After every 100 milseconds, server will pick a random stock from the cache, update the stock values and publish the tick.
 Updating stock values will follow following format:
 - Update `time` to current
@@ -35,3 +37,4 @@ Updating stock values will follow following format:
 - If new `close` is lower than the `low`, update the `low`
 - Pick a random number between 0 to 1000 and add it to the volume
 
+Ticks will be published as newline delimited JSON objects.
