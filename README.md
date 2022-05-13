@@ -15,7 +15,7 @@ Create a TCP server that listens on port `9000` and publishes stock ticks. Each 
     "volume": 1300000
 }
 ```
-Server will publish ticks for 10 symbols that will be randomly generated.  Server will create a cache of 10 stocks will following default values:
+Server will publish ticks for 10 symbols that will be randomly generated.  Server will create a cache of 10 stocks with following default values:
 ```json
 {
     "time": "2020-01-01T00:00:00.000Z", // current time
